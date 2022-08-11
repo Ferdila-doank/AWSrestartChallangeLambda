@@ -57,6 +57,6 @@ Note :
 1. Make sure region in S3, Lambda and SNS same
 2. Change the s3 name in code if the s3 name already exist
 3. Setup python in lambda in version 3.7 (pandas file only support for that version)
-
+4. Change TopicArn to Topic Arn in AWS SNS Topic
 
 
