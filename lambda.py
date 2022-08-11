@@ -5,6 +5,8 @@ import pandas as pd
 def lambda_handler(event, context):
     
     bucket_name = "wordcounttesting"
+    # Change to Bucket Name in AWS S3
+    
     df = pd.DataFrame(columns=['file_name','last_modified'])
     get_last_modified = lambda obj: int(obj['LastModified'].strftime('%s'))
     
@@ -31,3 +33,4 @@ def lambda_handler(event, context):
         Message="The word count in the file " + filename + " is " + str(len(all_file_content)) + ".",
         Subject= "Word Count Result"
         )
+    # Change TopicArn to Topic name in AWS SNS Service
